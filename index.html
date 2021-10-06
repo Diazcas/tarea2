@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lugo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css">
+    <!--FontAwesome-->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">lugo</a>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <select name="user" id="user">
+        </select>
+        <button id="buttonOrder" class="btn btn-secondary my-2 my-sm-0" data-toggle="modal"
+            data-target="#exampleModalCenter">Ver ordenes
+        </button>
+    </nav>
+
+    <div class="categoriasCont">
+        <div class="container">
+            <div class="saludoCont">
+                <h3>¡Hola Pedro!</h3>
+                <p>¿Que necesitas?</p>
+            </div>
+            <div class="row" id="row">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Pedro, estas son tus ordenes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <h4 id="tituloOrden">Producto 1</h4>
+                        <p id="descipcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!</p>
+                        <p id="precio">49.99</p>
+                    </section>
+                    <hr>
+                    <section>
+                        <h4 id="tituloOrden">Producto 2</h4>
+                        <p id="descipcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!</p>
+                        <p id="precio">49.99</p>
+                    </section>
+                    <hr>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter_categorias" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered rest" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Restaurantes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <div class="rest-cont" style="background-image: url(./img/banner.jpg);">
+                            <div class="img"></div>
+                            <h3>Empresa1</h3>
+                            <div class="productos">
+                                <div class="textoPro">
+                                    <h4>Producto1</h4>
+                                    <button data-toggle="modal"
+                                    data-target="#exampleModalCenter_aceptarOrden">Pedir</button>
+                                    <p id="desc">Lorem ipsum dolor sit amet,!</p>
+                                    <p id="precioProd">$12.49</p>
+                                </div>
+                                <hr>
+                                <div class="textoPro">
+                                    <h4>Producto1</h4>
+                                    <button data-toggle="modal"
+                                    data-target="#exampleModalCenter_aceptarOrden">Pedir</button>
+                                    <p id="desc">Lorem ipsum dolor sit amet,!</p>
+                                    <p id="precioProd">$12.49</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter_aceptarOrden" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered rest" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4>Producto1</h4>
+                    <p id="desc">asdasdasd</p>
+                    <label for="cantidad">Cantidad a solicitar:</label>
+                    <input type="text">    
+                    <p id="precio">$39.99</p>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Procesar orden</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
+</body>
+
+</html>
